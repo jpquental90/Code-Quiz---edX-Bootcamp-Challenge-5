@@ -1,32 +1,41 @@
 const questionTitle = document.getElementById("question-title");
 const choiceAnswers = document.getElementById("choices");
+const startButton = document.getElementById("start");
 
-let questionIndex = 0;
-let score = 0;
+let questionIndex;
+let score;
 
 const questions = [
     {
-        question: "Who did it?",
+        question: "The TV series 'Foundation' is based on the books by which author?",
         answers: [
-            { text: "Lady Violet", correct: true},
-            { text: "Vice President Mauve", correct: false},
-            { text: "Duchess of Vermillion", correct: false},
+            { text: "Robert A. Heinlein", correct: false},
+            { text: "Isaac Asimov", correct: true},
+            { text: "Arthur C. Clarke", correct: false},
         ]
     },
     {
-        question: "Where?",
+        question: "In which year was the first season released?",
         answers: [
-            { text: "The central fire", correct: false},
-            { text: "The ancient ruins", correct: false},
-            { text: "The thick forest", correct: true},
+            { text: "2021", correct: true},
+            { text: "2022", correct: false},
+            { text: "2023", correct: false},
         ]
     },
     {
-        question: "With what?",
+        question: "In the series, what are the names of the three co-existing clone versions of different ages of emperor Cleo?",
         answers: [
-            { text: "A cauldron", correct: false},
-            { text: "A log", correct: false},
-            { text: "A broom", correct: true},
+            { text: "Sunrise, Sunset, Twilight", correct: false},
+            { text: "Green, Amber, Red", correct: false},
+            { text: "Dawn, Day, Dusk", correct: true},
         ]
     }
 ];
+
+startButton.addEventListener("click", startQuiz);
+
+function startQuiz() {
+    questionIndex = 0;
+    score = 0;
+    showQuestion();
+}
