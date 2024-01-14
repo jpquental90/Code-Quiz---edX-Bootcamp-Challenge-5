@@ -93,3 +93,14 @@ function endQuiz() {
     finalScoreSpan.textContent = score;
 
 }
+
+
+// Highscores page
+
+const clearButton = document.getElementById("clear");
+
+    clearButton.addEventListener("click", function() {
+        clearHighScores();
+        displayHighScores();
+    });
+
