@@ -1,16 +1,24 @@
+/* Main body styles */
+
 body {
   font-family: Arial;
   font-size: 120%;
 }
 
-a {
-  color: #563d7c;
-  text-decoration: none;
-  transition: color 0.1s;
+.wrapper {
+  margin: 100px auto 0 auto;
+  max-width: 600px;
 }
 
-a:hover {
-  color: #8570a5;
+.hide {
+  display: none;
+}
+
+
+/* Start button and quiz options styles */
+
+.start {
+  text-align: center;
 }
 
 button {
@@ -26,18 +34,8 @@ button {
   transition: background-color 0.1s;
 }
 
-button, li:hover {
+button:hover, li:hover {
   background-color: #8570a5;
-}
-
-input[type="text"] {
-  font-size: 100%;
-}
-
-ol {
-  padding-left: 0px;
-  max-height: 400px;
-  overflow: auto;
 }
 
 #choices {
@@ -59,19 +57,30 @@ li {
   transition: background-color 0.1s;
 }
 
-
-
-.wrapper {
-  margin: 100px auto 0 auto;
-  max-width: 600px;
+input[type="text"] {
+  font-size: 100%;
 }
 
-.hide {
-  display: none;
+ol {
+  padding-left: 0px;
+  max-height: 400px;
+  overflow: auto;
 }
 
-.start {
-  text-align: center;
+ol li:nth-child(odd) {
+  background-color: #f3edfc;
+}
+
+/* Hyperlink (applying to HighScores) styles */
+
+a {
+  color: #563d7c;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+a:hover {
+  color: #8570a5;
 }
 
 .scores {
