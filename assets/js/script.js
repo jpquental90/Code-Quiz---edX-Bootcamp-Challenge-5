@@ -6,6 +6,9 @@ const questionsDiv = document.getElementById("questions");
 const endScreen = document.getElementById("end-screen");
 const feedbackDiv = document.getElementById("feedback");
 const finalScoreSpan = document.getElementById("final-score");
+const initialsInput = document.getElementById("initials");
+const submitButton = document.getElementById("submit");
+const highScoresList = document.getElementById("highscores");
 
 let questionIndex;
 let score;
@@ -91,16 +94,51 @@ function endQuiz() {
     questionsDiv.classList.add("hide");
     endScreen.classList.remove("hide");
     finalScoreSpan.textContent = score;
-
+    // saveHighScore(initials, score);
 }
 
+// submitButton.addEventListener("click", function () {
+//     console.log('hi');
+//     const initials = initialsInput.value.trim();
+
+//     if (initials !== "") {
+//         saveHighScore(initials, score);
+//     } else {
+//         alert("Please enter your initials.");
+//     }
+// });
 
 // Highscores page
 
-const clearButton = document.getElementById("clear");
+// const clearButton = document.getElementById("clear");
 
-    clearButton.addEventListener("click", function() {
-        clearHighScores();
-        displayHighScores();
-    });
+//     clearButton.addEventListener("click", function() {
+//         clearHighScores();
+//         displayHighScores();
+//     });
 
+    // function saveHighScore(initials, score) {
+    //     const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    //     highScores.push({ initials, score });
+    //     localStorage.setItem("highScores", JSON.stringify(highScores));
+    //     displayHighScores();  
+    // }
+
+    // function displayHighScores() {
+        
+    //     // highScoresList.innerHTML = "";
+    
+    //     const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    
+    //     highScores.sort((a, b) => b.score - a.score);
+    
+    //     highScores.forEach((score, index) => {
+    //         const listItem = document.createElement("li");
+    //         listItem.textContent = `${index + 1}. ${score.initials} - ${score.score}`;
+    //         highScoresList.appendChild(listItem);
+    //     });
+    // }
+    
+    // function clearHighScores() {
+    //     localStorage.removeItem("highScores");
+    // }
