@@ -1,6 +1,10 @@
 const titleEl = document.getElementById("question-title");
 const choicesEl = document.getElementById("choices");
 const startButton = document.getElementById("start");
+const startScreen = document.getElementById("start-screen");
+const questionsDiv = document.getElementById("questions");
+const endScreen = document.getElementById("end-screen");
+const feedbackDiv = document.getElementById("feedback");
 
 let questionIndex;
 let score;
@@ -32,17 +36,15 @@ const questionsQuiz = [
     }
 ];
 
-startButton.addEventListener("click", startQuiz);
-
-startQuiz() 
-
-function startQuiz() {
-    console.log('hi');
+startButton.addEventListener("click", function() {
     questionIndex = 0;
     score = 0;
+    startScreen.classList.add("hide");
+    questionsDiv.classList.remove("hide");
+    endScreen.classList.add("hide");
+    feedbackDiv.classList.add("hide");
     showQuestion();
-}
-
+});
 
 function showQuestion() {
     if (questionIndex < questionsQuiz.length) {
@@ -79,5 +81,8 @@ function checkAnswer(event) {
 }
 
 function endQuiz() {
+    questionsDiv.classList.add("hide");
+    endScreen.classList.remove("hide");
+    feedbackDiv.classList.remove("hide");
     alert(`Quiz completed! Your score is ${score}/${questionsQuiz.length}`);
 }
