@@ -34,11 +34,15 @@ const questionsQuiz = [
 
 startButton.addEventListener("click", startQuiz);
 
+startQuiz() 
+
 function startQuiz() {
+    console.log('hi');
     questionIndex = 0;
     score = 0;
     showQuestion();
 }
+
 
 function showQuestion() {
     if (questionIndex < questionsQuiz.length) {
@@ -50,12 +54,30 @@ function showQuestion() {
             const eachChoice = currentQuestion.choices[i];
             const listItem = document.createElement("li");
             listItem.textContent = eachChoice.text;
-            listItem.addEventListener("click", function() {
-                checkAnswer(i);
-            });
+            listItem.dataset.correct = eachChoice.correct;
+            listItem.addEventListener("click", checkAnswer);
             choicesEl.appendChild(listItem);
         }
     } else {
         endQuiz();
     }
+}
+
+function checkAnswer(event) {
+    const selectedAnswer = event.target;
+    const correct = selectedAnswer.dataset.correct === "true";
+
+    if (correct) {
+        alert("Right!");
+        score++;
+    } else {
+        alert("Wrong!");
+    }
+
+    questionIndex++;
+    showQuestion();
+}
+
+function endQuiz() {
+    alert(`Quiz completed! Your score is ${score}/${questionsQuiz.length}`);
 }
