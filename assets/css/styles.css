@@ -26,12 +26,8 @@ button {
   transition: background-color 0.1s;
 }
 
-button:hover {
+button, li:hover {
   background-color: #8570a5;
-}
-
-.choices button {
-  display: block;
 }
 
 input[type="text"] {
@@ -44,14 +40,26 @@ ol {
   overflow: auto;
 }
 
+#choices {
+  padding-inline-start: 0;
+}
+
 li {
   padding: 5px;
   list-style: decimal inside none;
+  width:fit-content;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 100%;
+  background-color: #563d7c;
+  border-radius: 5px;
+  padding: 2px 10px;
+  color: white;
+  border: 0;
+  transition: background-color 0.1s;
 }
 
-li:nth-child(odd) {
-  background-color: #f3edfc;
-}
+
 
 .wrapper {
   margin: 100px auto 0 auto;
