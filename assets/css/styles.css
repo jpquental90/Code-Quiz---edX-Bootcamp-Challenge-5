@@ -72,16 +72,6 @@ button:active, li:active {
   box-shadow: 0 0 4px #3498db;
 }
 
-ol {
-  padding-left: 0px;
-  max-height: 400px;
-  overflow: auto;
-}
-
-ol li:nth-child(odd) {
-  background-color: #f3edfc;
-}
-
 
 /* Timer */
 
@@ -106,6 +96,16 @@ a:hover {
 
 
 /* Highscores */
+
+ol {
+  padding-left: 0px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+ol li:nth-child(odd) {
+  background-color: #f3edfc;
+}
 
 .scores {
   position: absolute;

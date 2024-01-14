@@ -70,19 +70,24 @@ function checkAnswer(event) {
     const correct = selectedAnswer.dataset.correct === "true";
 
     if (correct) {
-        alert("Right!");
+        feedbackDiv.textContent = "Correct!";
+        feedbackDiv.classList.remove("hide");
         score++;
     } else {
-        alert("Wrong!");
+        feedbackDiv.textContent = "Wrong!";
+        feedbackDiv.classList.remove("hide");
     }
-
-    questionIndex++;
-    showQuestion();
+    
+    setTimeout(function () {
+        feedbackDiv.classList.add("hide"); 
+        questionIndex++;
+        showQuestion(); 
+    }, 1000);
 }
 
 function endQuiz() {
+    feedbackDiv.classList.add("hide");
     questionsDiv.classList.add("hide");
     endScreen.classList.remove("hide");
-    feedbackDiv.classList.remove("hide");
     alert(`Quiz completed! Your score is ${score}/${questionsQuiz.length}`);
 }
