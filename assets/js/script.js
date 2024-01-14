@@ -5,6 +5,7 @@ const startScreen = document.getElementById("start-screen");
 const questionsDiv = document.getElementById("questions");
 const endScreen = document.getElementById("end-screen");
 const feedbackDiv = document.getElementById("feedback");
+const finalScoreSpan = document.getElementById("final-score");
 
 let questionIndex;
 let score;
@@ -89,5 +90,6 @@ function endQuiz() {
     feedbackDiv.classList.add("hide");
     questionsDiv.classList.add("hide");
     endScreen.classList.remove("hide");
-    alert(`Quiz completed! Your score is ${score}/${questionsQuiz.length}`);
+    finalScoreSpan.textContent = score;
+
 }
