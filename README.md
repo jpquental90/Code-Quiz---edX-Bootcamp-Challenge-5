@@ -1,6 +1,6 @@
 # Code Quiz
 
-This repository contains my answer to the Module 6 Challenge of the Web Development edX bootcamp: https://jpquental90.github.io/Password-Generator---edX-Bootcamp-Challenge-5/
+This repository contains my answer to the Module 6 Challenge of the Web Development edX bootcamp: https://jpquental90.github.io/Code-Quiz---edX-Bootcamp-Challenge-6/
 
 ## Description
 

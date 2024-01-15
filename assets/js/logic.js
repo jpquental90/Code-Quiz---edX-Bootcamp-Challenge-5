@@ -113,6 +113,15 @@ function checkAnswer(event) {
 }
 
 
+// EventListener / function added to allow user to submit their initials in the final screen by pressing the key 'enter'.
+
+initialsInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        submitInitialsAndSave();
+    }
+});
+
+
 // Function indicating what should be displayed in the final screen.
 
 function endQuiz() {
