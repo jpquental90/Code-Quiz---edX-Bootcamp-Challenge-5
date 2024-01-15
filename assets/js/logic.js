@@ -11,11 +11,16 @@ const submitButton = document.getElementById("submit");
 const highScoresList = document.getElementById("highscores");
 const correctSound = new Audio("./assets/sfx/correct.wav");
 const incorrectSound = new Audio("./assets/sfx/incorrect.wav");
+const timerSpan = document.getElementById("time");
 
 let questionIndex;
 let score;
+let timer;
+let timeoutId;
+let timerInterval;
 
-
+const timerDuration = 75; 
+const timePenalty = 10;
 
 startButton.addEventListener("click", function() {
     questionIndex = 0;
@@ -25,7 +30,23 @@ startButton.addEventListener("click", function() {
     endScreen.classList.add("hide");
     feedbackDiv.classList.add("hide");
     showQuestion();
+    startTimer();
 });
+
+function startTimer() {
+    timer = timerDuration;
+    timerSpan.textContent = timer;
+
+    timerInterval = setInterval(function () {
+        timer--;
+        timerSpan.textContent = timer;
+
+        if (timer <= 0) {
+            clearInterval(timerInterval);
+            endQuiz();
+        }
+    }, 1000);
+}
 
 function showQuestion() {
     if (questionIndex < questionsQuiz.length) {
@@ -59,6 +80,16 @@ function checkAnswer(event) {
         feedbackDiv.textContent = "Wrong!";
         feedbackDiv.classList.remove("hide");
         incorrectSound.play();
+
+        timer -= timePenalty;
+        if (timer < 0) {
+            timer = 0;
+        }
+
+        if (questionIndex === questionsQuiz.length - 1) {
+            clearTimeout(timeoutId);
+            endQuiz();
+        }
     }
     
     setTimeout(function () {
@@ -69,6 +100,7 @@ function checkAnswer(event) {
 }
 
 function endQuiz() {
+    clearInterval(timerInterval);
     feedbackDiv.classList.add("hide");
     questionsDiv.classList.add("hide");
     endScreen.classList.remove("hide");
