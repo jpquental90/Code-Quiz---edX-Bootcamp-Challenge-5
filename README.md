@@ -10,6 +10,7 @@ My task was to create a time quiz application that uses local storage to store h
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Code](#code)
 * [Credits](#credits)
 * [License](#license)
 
@@ -19,33 +20,35 @@ N/A
 
 ## Usage
 
-#### This is a a picture of what the website looked like as presented by the starter code:
+#### Initial page with introduction to quiz challenge
 
-![Screenshot of page layout from starter code](images/page_layout.png)
-
----
-
-HTML, CSS and Javascript files were provided. The Javascript file contained some pre-written arrays and partially completed functions.
-
-#### Some of the original content of the Javascript file:
-
-![Screenshot of original Javascript code](images/screenshot_startercode1.png)
+![Screenshot of initial page with quiz introduction and 'Start' button](assets/images/Screenshot%20app%201.png)
 
 ---
 
-HTML, CSS and JavaScript files were provided. The JavaScript file contained some pre-written arrays and partially completed functions.
+#### Example of quiz question and options, as well as the message that display when the selected answer is incorrect:
 
-#### Some of the code I added to the Javascript file:
+![Screenshot of one of the questions when the selected answer is incorrect](assets/images/Screenshot%20app%202.png)
 
-![Screenshot of added Javascript code](images/screenshot_startercode2.png)
+You can also see above that functioning of the timer, with the number reduced from what it was at the start.
 
 ---
 
-After my modifications, the 'Generate Password' button works by providng the user with confirm and prompt messages allowing him to set the parameters for how his random password should be generated.
+#### Final screen after completion of quiz, allowing user to submit their initials and save their score:
 
-#### Screenshot of first message that appears upon clicking the button:
+![Screenshot of final screen with text box for user initials and a 'Submit' button](assets/images/Screenshot%20app%203.png)
 
-![Screenshot of added Javascript code](images/screenshot_startercode3.png)
+---
+
+After clicking 'Submit', the Highscores page is displayed. This page is also accessible at all times from the top left corner of the quiz pages. 
+
+#### Highscores display, with submissions listed by order of score (first priority) and time left (second priority):
+
+![High scores page with 3 submissions which are ordered by score and time left](assets/images/Screenshot%20app%204.png)
+
+## Code
+
+N/A
 
 ## Credits
 
