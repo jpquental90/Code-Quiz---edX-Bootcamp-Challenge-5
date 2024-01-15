@@ -1,26 +1,47 @@
 const questionsQuiz = [
     {
-        title: "The TV series 'Foundation' is based on the books by which author?",
+        title: "Commonly used data types DO NOT include:",
         choices: [
-            { text: "Robert A. Heinlein", correct: false},
-            { text: "Isaac Asimov", correct: true},
-            { text: "Arthur C. Clarke", correct: false},
+            { text: "Strings", correct: false},
+            { text: "Booleans", correct: false},
+            { text: "Alerts", correct: true},
+            { text: "Numbers", correct: false},
         ]
     },
     {
-        title: "In which year was the first season released?",
+        title: "The condition in an if / else statement is enclosed within ____.",
         choices: [
-            { text: "2021", correct: true},
-            { text: "2022", correct: false},
-            { text: "2023", correct: false},
+            { text: "Quotes", correct: false},
+            { text: "Curly brackets", correct: true},
+            { text: "Parenthesis", correct: false},
+            { text: "Square brackets", correct: false},
         ]
     },
     {
-        title: "In the series, what are the names of the three co-existing clone versions of different ages of emperor Cleo?",
+        title: "Arrays in JavaScript can be used to store ____.",
         choices: [
-            { text: "Sunrise, Sunset, Twilight", correct: false},
-            { text: "Green, Amber, Red", correct: false},
-            { text: "Dawn, Day, Dusk", correct: true},
+            { text: "Numbers and strings", correct: false},
+            { text: "Other arrays", correct: false},
+            { text: "Booleans", correct: false},
+            { text: "All of the above", correct: true},
+        ]
+    },
+    {
+        title: "String values must be enclosed within ____ when being assigned to variables.",
+        choices: [
+            { text: "Quotes", correct: true},
+            { text: "Commas", correct: false},
+            { text: "Curly brackets", correct: false},
+            { text: "Parenthesis", correct: false},
+        ]
+    },
+    {
+        title: "A very useful tool used during development and debugging for printing content to the debugger us:",
+        choices: [
+            { text: "JavaScript", correct: false},
+            { text: "Terminal/bash", correct: false},
+            { text: "For loops", correct: false},
+            { text: "console.log", correct: true},
         ]
     }
 ];
