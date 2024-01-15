@@ -1,3 +1,5 @@
+//Variable declarations and link with HTML elements
+
 const titleEl = document.getElementById("question-title");
 const choicesEl = document.getElementById("choices");
 const startButton = document.getElementById("start");
@@ -8,9 +10,6 @@ const feedbackDiv = document.getElementById("feedback");
 const finalScoreSpan = document.getElementById("final-score");
 const initialsInput = document.getElementById("initials");
 const submitButton = document.getElementById("submit");
-const highScoresList = document.getElementById("highscores");
-const correctSound = new Audio("./assets/sfx/correct.wav");
-const incorrectSound = new Audio("./assets/sfx/incorrect.wav");
 const timerSpan = document.getElementById("time");
 
 let questionIndex;
@@ -21,6 +20,11 @@ let timerInterval;
 
 const timerDuration = 75; 
 const timePenalty = 10;
+const correctSound = new Audio("./assets/sfx/correct.wav");
+const incorrectSound = new Audio("./assets/sfx/incorrect.wav");
+
+
+// EventListener + Function to start quiz after clicking on 'Start' button
 
 startButton.addEventListener("click", function() {
     questionIndex = 0;
@@ -32,6 +36,9 @@ startButton.addEventListener("click", function() {
     showQuestion();
     startTimer();
 });
+
+
+// Function to set the timer to start when the quiz begins (referred to in the previous function). Quiz ends if time runs out. There is a delay of a second between questions. Time is subtracted if an incorrect answer is given.
 
 function startTimer() {
     timer = timerDuration;
@@ -47,6 +54,9 @@ function startTimer() {
         }
     }, 1000);
 }
+
+
+// Function to display each individual question and associated choices, regardless of quiz length or type of question.
 
 function showQuestion() {
     if (questionIndex < questionsQuiz.length) {
@@ -66,6 +76,9 @@ function showQuestion() {
         endQuiz();
     }
 }
+
+
+// Function to check whether the selected answer is correct or incorrect. Score increases or decreases accordingly, feedback is given and a corresponding sound is played. The final screen is displayed when we have run out of questions.
 
 function checkAnswer(event) {
     const selectedAnswer = event.target;
@@ -99,6 +112,9 @@ function checkAnswer(event) {
     }, 1000);
 }
 
+
+// Function indicating what should be displayed in the final screen.
+
 function endQuiz() {
     clearInterval(timerInterval);
     feedbackDiv.classList.add("hide");
@@ -108,12 +124,14 @@ function endQuiz() {
     submitInitialsAndSave();
 }
 
+
+// Function to assign values to the user's input, score and time left, save them in local storage and set them in order in the highscores table, prioritising score over time left. Once the user submits their initials, the window switches to the Highscores display.
+
 function submitInitialsAndSave() {
 
     let submittedInitials = initialsInput.value;
 
     if (submittedInitials.trim() !== "") {
-
         const highScore = {
             initials: submittedInitials,
             score: score,
@@ -136,5 +154,8 @@ function submitInitialsAndSave() {
         window.location.href = "highscores.html";
     }
 }
+
+
+// Links function above to a 'click' event assigned to the 'Submit' button.
 
 submitButton.addEventListener("click", submitInitialsAndSave);
