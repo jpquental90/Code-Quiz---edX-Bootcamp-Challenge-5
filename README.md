@@ -48,11 +48,29 @@ After clicking 'Submit', the Highscores page is displayed. This page is also acc
 
 ## Code
 
-N/A
+I have made some changes to the HTML and especially the CSS file, but the main work was completed on JavaScript. I created all 3 JavaScript files suggested as links (in the index.html and highscores.html files) in the starter code. Comments were added throughout to explain each of the steps taken to create the app functionality and interaction with the user.
+
+#### Questions file
+
+![Screenshot of JavaScript code with list of quiz questions](assets/images/Screenshot%20code%201.png)
+
+---
+
+#### Logic file
+
+![Screenshot of JavaScript code with logic behind quiz](assets/images/Screenshot%20code%202.png)
+
+---
+
+#### Highscores file
+
+![Screenshot of JavaScript code with logic behind the display of highscores from local storage](assets/images/Screenshot%20code%203.png)
+
+---
 
 ## Credits
 
-Google was used to research how to best complete these functions. I also consulted some of the material from the edX classes.
+I have studied DOM manipulation on Digital Ocean and Google was used to research the solution for each coding step. I have used the edX bootcamp Xpert Learning Assistant to help troubleshoot some of the problems with the code. I also consulted some of the material from the edX bootcamp classes.
 
 ## License
 
