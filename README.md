@@ -22,13 +22,19 @@ N/A
 
 #### Initial page with introduction to quiz challenge
 
+<center>
+
 ![Screenshot of initial page with quiz introduction and 'Start' button](assets/images/Screenshot%20app%201.png)
+</center>
 
 ---
 
 #### Example of quiz question and options, as well as the message that display when the selected answer is incorrect:
 
+<center>
+
 ![Screenshot of one of the questions when the selected answer is incorrect](assets/images/Screenshot%20app%202.png)
+</center>
 
 You can also see above that functioning of the timer, with the number reduced from what it was at the start.
 
@@ -36,7 +42,10 @@ You can also see above that functioning of the timer, with the number reduced fr
 
 #### Final screen after completion of quiz, allowing user to submit their initials and save their score:
 
+<center>
+
 ![Screenshot of final screen with text box for user initials and a 'Submit' button](assets/images/Screenshot%20app%203.png)
+</center>
 
 ---
 
@@ -44,7 +53,10 @@ After clicking 'Submit', the Highscores page is displayed. This page is also acc
 
 #### Highscores display, with submissions listed by order of score (first priority) and time left (second priority):
 
+<center>
+
 ![High scores page with 3 submissions which are ordered by score and time left](assets/images/Screenshot%20app%204.png)
+</center>
 
 ## Code
 
@@ -52,19 +64,28 @@ I have made some changes to the HTML and especially the CSS file, but the main w
 
 #### Questions file
 
+<center>
+
 ![Screenshot of JavaScript code with list of quiz questions](assets/images/Screenshot%20code%201.png)
+</center>
 
 ---
 
 #### Logic file
 
+<center>
+
 ![Screenshot of JavaScript code with logic behind quiz](assets/images/Screenshot%20code%202.png)
+</center>
 
 ---
 
 #### Highscores file
 
+<center>
+
 ![Screenshot of JavaScript code with logic behind the display of highscores from local storage](assets/images/Screenshot%20code%203.png)
+</center>
 
 ---
 
