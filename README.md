@@ -25,7 +25,6 @@ N/A
 <center>
 
 ![Screenshot of initial page with quiz introduction and 'Start' button](assets/images/Screenshot%20app%201.png)
-
 </center>
 
 ---
