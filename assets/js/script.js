@@ -9,6 +9,8 @@ const finalScoreSpan = document.getElementById("final-score");
 const initialsInput = document.getElementById("initials");
 const submitButton = document.getElementById("submit");
 const highScoresList = document.getElementById("highscores");
+const correctSound = new Audio("./assets/sfx/correct.wav");
+const incorrectSound = new Audio("./assets/sfx/incorrect.wav");
 
 let questionIndex;
 let score;
@@ -77,9 +79,11 @@ function checkAnswer(event) {
         feedbackDiv.textContent = "Correct!";
         feedbackDiv.classList.remove("hide");
         score++;
+        correctSound.play();
     } else {
         feedbackDiv.textContent = "Wrong!";
         feedbackDiv.classList.remove("hide");
+        incorrectSound.play();
     }
     
     setTimeout(function () {
