@@ -103,8 +103,13 @@ ol {
   overflow: auto;
 }
 
+ol li {
+  width: 90%;
+}
+
 ol li:nth-child(odd) {
   background-color: #f3edfc;
+  color: black;
 }
 
 .scores {
