@@ -98,11 +98,6 @@ function checkAnswer(event) {
         if (timer < 0) {
             timer = 0;
         }
-
-        if (questionIndex === questionsQuiz.length - 1) {
-            clearTimeout(timeoutId);
-            endQuiz();
-        }
     }
     
     setTimeout(function () {
