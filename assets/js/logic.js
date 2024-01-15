@@ -117,13 +117,19 @@ function submitInitialsAndSave() {
         const highScore = {
             initials: submittedInitials,
             score: score,
+            timeLeft: timer,
         };
 
         let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
         highScores.push(highScore);
 
-        highScores.sort((a, b) => b.score - a.score);
+        highScores.sort((a, b) => {
+            if (b.score !== a.score) {
+                return b.score - a.score;
+            }
+            return b.timeLeft - a.timeLeft;
+        });
 
         localStorage.setItem("highScores", JSON.stringify(highScores));
 
