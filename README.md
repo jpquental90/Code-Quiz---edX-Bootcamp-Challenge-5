@@ -4,7 +4,7 @@ This repository contains my answer to the Module 6 Challenge of the Web Developm
 
 ## Description
 
-My task was to create a time quiz application that uses local storage to store highscores. Some starter code was provided by edX in HTML and CSS files. A gif demonstrating the desired local of the final product was provided as a guide. 
+My task was to create a time quiz application that uses local storage to store highscores. Some starter code was provided by edX in HTML and CSS files. A gif demonstrating the desired look of the final product was provided as a guide. 
 
 ## Table of Contents
 
